@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/Screens/home_screen.dart';
 
+import '../Widgets/bottom_button.dart';
+import '../Widgets/point_display.dart';
+
 class ResultScreen extends StatefulWidget {
   const ResultScreen({required this.score, super.key});
   final int score;
@@ -133,56 +136,6 @@ class _ResultScreenState extends State<ResultScreen> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class BottomButton extends StatelessWidget {
-  BottomButton({this.onPressed, required this.label, super.key});
-  void Function()? onPressed;
-  final String label;
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      style: TextButton.styleFrom(
-        minimumSize: Size(double.infinity, 40),
-        backgroundColor: Color(0xff2200A6),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      ),
-      child: Text(
-        label,
-        style: GoogleFonts.archivo(
-          fontWeight: FontWeight.w500,
-          fontSize: 16,
-          color: Colors.white,
-        ),
-      ),
-    );
-  }
-}
-
-class PointDisplayContainer extends StatelessWidget {
-  const PointDisplayContainer({this.child, super.key});
-  final Widget? child;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(4),
-      height: 40,
-      width: 160,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: Color(0xffF3F4F6),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            offset: Offset(0, 4),
-            blurRadius: 7,
-          ),
-        ],
-      ),
-      child: child,
     );
   }
 }

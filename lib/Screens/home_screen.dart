@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/Controller/options_model.dart';
 import 'package:quiz_app/Screens/result_screen.dart';
 
+import '../Widgets/answer_card.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -308,61 +310,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class AnswerCard extends StatelessWidget {
-  AnswerCard({
-    required this.answer,
-    this.backgroundcolor,
-    required this.label,
-    this.circolor,
-    this.onTap,
-    super.key,
-  });
-  final Color? backgroundcolor;
-  final Color? circolor;
-  final String label;
-  final String answer;
-  void Function()? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.all(12),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-
-          color: backgroundcolor,
-        ),
-
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          spacing: 12,
-          children: [
-            CircleAvatar(
-              backgroundColor: circolor,
-              child: Text(
-                label,
-                style: GoogleFonts.archivo(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-            Text(
-              answer,
-              style: GoogleFonts.archivo(
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
-              ),
-            ),
-          ],
         ),
       ),
     );
