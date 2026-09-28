@@ -149,7 +149,7 @@ git push origin feature/NewFeature
 
 **Bijay Nep**
 
-- GitHub: https://github.com/your-username
+- GitHub: https://github.com/bjnepali7
 
 ---
 
