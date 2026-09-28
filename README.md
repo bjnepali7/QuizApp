@@ -8,7 +8,7 @@ A modern and interactive Quiz Application built with **Flutter**. The app allows
 |-------------|---------------|
 | ![Quiz Screen](screenshots/home.png) | ![Result Screen](screenshots/result.png) |
 
-> Place your screenshots inside a `screenshots` folder and update the file names if necessary.
+
 
 ---
 
@@ -62,7 +62,7 @@ lib/
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/flutter-quiz-app.git
+git clone https://github.com/bjnepali7/flutter-quiz-app.git
 ```
 
 Go to the project directory
